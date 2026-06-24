@@ -234,11 +234,11 @@
     <div id="toast-container"></div>
     <!-- TopNavBar -->
     <header class="sticky top-0 w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
-        <nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop py-4">
-            <div class="text-headline-md font-headline-md text-primary flex items-center gap-3">
-                <img class="h-11 w-11 object-contain rounded-lg" src="/logo.jpeg"
+        <nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4">
+            <div class="text-base sm:text-lg md:text-headline-md font-headline-md text-primary flex items-center gap-2 md:gap-3">
+                <img class="h-8 w-8 md:h-11 md:w-11 object-contain rounded-lg" src="/logo.jpeg"
                     alt="Shree Geeta Financial Consultants Logo" />
-                <span>Shree Geeta Financial</span>
+                <span class="leading-tight">Shree Geeta Financial</span>
             </div>
             <div class="hidden md:flex items-center gap-8">
                 <a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200"
@@ -252,45 +252,62 @@
                 <a class="font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors duration-200"
                     href="#faq">FAQs</a>
             </div>
-            <a href="#contact"
-                class="bg-secondary-container text-white px-6 py-2.5 rounded-lg font-label-bold text-label-bold hover:brightness-110 transition-all luxury-shadow">
+            <div class="flex items-center gap-4">
+                <a href="#contact"
+                    class="hidden md:inline-block bg-secondary-container text-white px-6 py-2.5 rounded-lg font-label-bold text-label-bold hover:brightness-110 transition-all luxury-shadow">
+                    Book Free Consultation
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-primary p-1">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white absolute top-full left-0 w-full border-t border-outline-variant/20 shadow-lg flex-col py-4 px-margin-mobile md:px-margin-desktop gap-4 z-40 max-h-[80vh] overflow-y-auto">
+            <a class="font-label-bold text-lg text-on-surface-variant hover:text-secondary py-2 border-b border-outline-variant/10" href="#services" onclick="closeMobileMenu()">Services</a>
+            <a class="font-label-bold text-lg text-on-surface-variant hover:text-secondary py-2 border-b border-outline-variant/10" href="#about" onclick="closeMobileMenu()">About Us</a>
+            <a class="font-label-bold text-lg text-on-surface-variant hover:text-secondary py-2 border-b border-outline-variant/10" href="#process" onclick="closeMobileMenu()">Process</a>
+            <a class="font-label-bold text-lg text-on-surface-variant hover:text-secondary py-2 border-b border-outline-variant/10" href="#testimonials" onclick="closeMobileMenu()">Testimonials</a>
+            <a class="font-label-bold text-lg text-on-surface-variant hover:text-secondary py-2 border-b border-outline-variant/10" href="#faq" onclick="closeMobileMenu()">FAQs</a>
+            <a href="#contact" onclick="closeMobileMenu()" class="bg-secondary-container text-white text-center px-6 py-3 rounded-lg font-label-bold text-lg hover:brightness-110 mt-2">
                 Book Free Consultation
             </a>
-        </nav>
+        </div>
     </header>
     <main>
         <!-- Hero Section -->
-        <section class="relative min-h-[921px] flex items-center overflow-hidden">
+        <section class="relative md:min-h-[921px] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10">
+                <div class="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-background via-background/90 md:via-background/80 to-background/40 md:to-transparent z-10">
                 </div>
                 <div class="w-full h-full bg-cover bg-center"
                     style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUvVk-rrGAL6bE8Q3Zwp6SxSB12ldOODnhC-u_U33RzoAi3ATUw7kq8kxL-5PvGNagUBPNgL4ibvOzcD8vNWiLq2iwsQaFNEAnqja9fhPH61LFlorGWKUcKMe9_pxVCYF0xd1Ml2hjfFWfXAgU0jPdHqAjt8zlKgHt6Hne6qDElzFhAc9W0qSv1SoddMW8Aj0OqHW-DeuEwcHhJMVgrdoi4L80SIeZgskC6ker1xZfGyzKTK_el8iKxIsNY1iqwlE6PNdJ6WR8qiA2')">
                 </div>
             </div>
             <div
-                class="relative z-20 max-w-container-max mx-auto px-margin-desktop w-full grid md:grid-cols-2 gap-12 items-center py-section-gap">
+                class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid md:grid-cols-2 gap-12 items-center py-section-gap">
                 <div class="space-y-8">
                     <div
                         class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full font-label-bold text-label-bold">
                         <span class="material-symbols-outlined text-sm">verified_user</span>
                         Your Trusted Financial Compliance Partner
                     </div>
-                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface max-w-xl">
+                    <h1 class="font-display-lg text-[32px] leading-[40px] md:text-display-lg text-on-surface max-w-xl">
                         Stay Compliant, <span class="text-primary">Grow Confidently</span> &amp; Achieve More
                     </h1>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    <p class="font-body-lg text-base md:text-body-lg text-on-surface-variant max-w-lg">
                         From tax planning and GST compliance to financial advisory and project finance, we help
                         businesses and individuals stay financially secure and legally compliant.
                     </p>
-                    <div class="flex flex-wrap gap-4">
+                    <div class="flex flex-col sm:flex-row w-full gap-4">
                         <button
-                            class="bg-secondary-container text-white px-8 py-4 rounded-lg font-label-bold text-lg hover:brightness-110 transition-all flex items-center gap-2 luxury-shadow">
+                            class="w-full sm:w-auto justify-center bg-secondary-container text-white px-4 md:px-8 py-4 rounded-lg font-label-bold text-base md:text-lg hover:brightness-110 transition-all flex items-center gap-2 luxury-shadow whitespace-nowrap">
                             Book Free Consultation
                             <span class="material-symbols-outlined">arrow_forward</span>
                         </button>
                         <button
-                            class="bg-white border-2 border-primary text-primary px-8 py-4 rounded-lg font-label-bold text-lg hover:bg-primary/5 transition-all flex items-center gap-2">
+                            class="w-full sm:w-auto justify-center bg-white border-2 border-primary text-primary px-4 md:px-8 py-4 rounded-lg font-label-bold text-base md:text-lg hover:bg-primary/5 transition-all flex items-center gap-2 whitespace-nowrap">
                             <span class="material-symbols-outlined">call</span>
                             Call Now
                         </button>
@@ -340,12 +357,12 @@
         <!-- Trust Bar -->
         <section class="bg-surface-container-low py-10 border-y border-outline-variant/20">
             <div
-                class="max-w-container-max mx-auto px-margin-desktop flex flex-wrap justify-between items-center gap-8">
-                <div class="flex items-center gap-2 font-label-bold text-primary">
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex flex-col md:flex-row items-center gap-2 font-label-bold text-primary text-center">
                     <span class="text-secondary">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                     Trusted by Businesses Across India
                 </div>
-                <div class="flex flex-wrap items-center gap-10 opacity-70 grayscale hover:grayscale-0 transition-all">
+                <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 opacity-70 grayscale hover:grayscale-0 transition-all">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-primary">description</span>
                         <span class="font-label-bold">Income Tax Experts</span>
@@ -367,11 +384,11 @@
         </section>
         <!-- About Section -->
         <section class="py-section-gap" id="about">
-            <div class="max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-2 gap-16 items-center">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-16 items-center">
                 <div class="relative group">
                     <div class="absolute -inset-4 bg-primary/5 rounded-2xl group-hover:bg-primary/10 transition-colors">
                     </div>
-                    <img class="relative z-10 rounded-2xl shadow-xl w-full h-[500px] object-cover"
+                    <img class="relative z-10 rounded-2xl shadow-xl w-full h-[300px] md:h-[500px] object-cover"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLxEz7bxalinrFW_BphfhVdzBIoHJF6jbn0pKPk7Vj6udx2AFVUbf4CstV9rRRagZTL79SHjtygnjcRTSX6WQtW-1dUCNUuUoHc8hiv5sx0VwyCDB815EfhNcCDX5xq7W4TSvtTf9AX85BV44r8GpHW-YPZuOzH--W7Qo05IVMcWB4F_sjEpH4Vkh-V3qgqvWLMJ91qrD20MCxGqOsGX1OUwECJ2ZvNlJA5b64Ipsr9zOlv9FFLLHitlygwkR6Kx8HZU1E4QhoEN0E"
                         alt="Financial Consultant" />
                     <div class="absolute bottom-8 right-8 z-20 bg-primary p-6 rounded-xl text-white shadow-2xl">
@@ -424,7 +441,7 @@
         </section>
         <!-- Services Section -->
         <section class="py-section-gap bg-surface-container-lowest" id="services">
-            <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
                     <h2 class="text-primary font-label-bold tracking-widest uppercase">Expertise</h2>
                     <h3 class="font-headline-md text-4xl text-on-surface">Our Specialized Financial Services</h3>
@@ -565,7 +582,7 @@
                 <div class="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full blur-[100px]"></div>
                 <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full blur-[100px]"></div>
             </div>
-            <div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
                 <div class="text-center mb-16">
                     <h2 class="text-secondary-fixed font-label-bold tracking-widest uppercase mb-4">The Advantage</h2>
                     <h3 class="font-headline-md text-4xl">Why Choose Shree Geeta?</h3>
@@ -623,7 +640,7 @@
         </section>
         <!-- Process Section -->
         <section class="py-section-gap overflow-x-hidden" id="process">
-            <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="text-center mb-20">
                     <h2 class="text-primary font-label-bold tracking-widest uppercase mb-4">Methodology</h2>
                     <h3 class="font-headline-md text-4xl text-on-surface">Our Seamless 5-Step Process</h3>
@@ -684,7 +701,7 @@
         <!-- Stats Section -->
         <section class="bg-primary-container text-on-primary-container py-20">
             <div
-                class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
                 <div class="space-y-2">
                     <div class="text-5xl font-bold">1000+</div>
                     <div class="text-primary-fixed-dim font-label-bold">Tax Returns Filed</div>
@@ -705,7 +722,7 @@
         </section>
         <!-- Testimonials -->
         <section class="py-section-gap" id="testimonials">
-            <div class="max-w-container-max mx-auto px-margin-desktop">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
                     <div class="max-w-2xl">
                         <h2 class="text-primary font-label-bold tracking-widest uppercase mb-4">Success Stories</h2>
@@ -778,7 +795,7 @@
         </section>
         <!-- FAQ Section -->
         <section class="py-section-gap bg-surface-light" id="faq">
-            <div class="max-w-3xl mx-auto px-margin-desktop">
+            <div class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="text-center mb-16">
                     <h2 class="text-primary font-label-bold tracking-widest uppercase mb-4">Help Center</h2>
                     <h3 class="font-headline-md text-4xl text-on-surface">Frequently Asked Questions</h3>
@@ -830,7 +847,7 @@
         </section>
         <!-- Contact Section -->
         <section class="py-section-gap" id="contact">
-            <div class="max-w-container-max mx-auto px-margin-desktop grid md:grid-cols-2 gap-16">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-16">
                 <div>
                     <h2 class="text-primary font-label-bold tracking-widest uppercase mb-4">Connect</h2>
                     <h3 class="font-headline-md text-4xl text-on-surface mb-8">Ready to Secure Your Financial Future?
@@ -931,19 +948,19 @@
                 </div>
             </div>
             <div
-                class="max-w-container-max mx-auto px-margin-desktop relative z-10 flex flex-col md:flex-row justify-between items-center gap-10">
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col md:flex-row justify-between items-center gap-10">
                 <div class="text-white text-center md:text-left">
-                    <h3 class="font-headline-md text-4xl mb-4">Need Expert Financial Guidance?</h3>
+                    <h3 class="font-headline-md text-3xl md:text-4xl mb-4">Need Expert Financial Guidance?</h3>
                     <p class="text-primary-fixed text-lg">Stop worrying about compliance. Start focusing on your growth.
                     </p>
                 </div>
-                <div class="flex flex-wrap gap-4">
+                <div class="flex flex-col sm:flex-row w-full md:w-auto gap-4">
                     <button
-                        class="bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-fixed-dim transition-all">
+                        class="w-full sm:w-auto bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-fixed-dim transition-all">
                         Book Consultation
                     </button>
                     <button
-                        class="border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all">
+                        class="w-full sm:w-auto border-2 border-white text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-all">
                         Call Now
                     </button>
                 </div>
@@ -953,7 +970,7 @@
     <!-- Footer -->
     <footer class="bg-inverse-surface text-white">
         <div
-            class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
             <div class="col-span-1">
                 <div class="flex items-center gap-3 mb-4">
                     <img class="h-11 w-11 object-contain rounded-lg bg-white p-0.5" src="/logo.jpeg"
@@ -1028,7 +1045,7 @@
         </div>
         <div class="border-t border-white/10 py-6">
             <div
-                class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center text-caption text-inverse-on-surface/60">
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row gap-4 justify-between items-center text-caption text-inverse-on-surface/60 text-center md:text-left">
                 <p>&copy; 2024 Shree Geeta Financial Consultants. All rights reserved.</p>
                 <p>Designed for Institutional Trust.</p>
             </div>
@@ -1052,6 +1069,24 @@
                 header.classList.remove('py-2', 'shadow-md');
             }
         });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+            icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+            const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+            icon.textContent = 'menu';
+        }
     </script>
     <script type="module" src="/src/main.ts"></script>
 </body>

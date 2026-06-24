@@ -35,12 +35,10 @@
 <body class="bg-background text-on-surface font-body-md min-h-screen">
     
     <!-- LOGIN SECTION -->
-    <div id="login-section" class="hidden min-h-screen bg-gradient-to-br from-inverse-surface via-[#1e293b] to-[#0f172a] flex items-center justify-center p-6">
-        <div class="glass-card p-10 rounded-2xl max-w-md w-full shadow-2xl space-y-8">
-            <div class="text-center space-y-2">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-2">
-                    <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
-                </div>
+    <div id="login-section" class="hidden min-h-screen bg-gradient-to-br from-inverse-surface via-[#1e293b] to-[#0f172a] flex items-center justify-center p-4 md:p-6">
+        <div class="glass-card p-6 md:p-10 rounded-2xl max-w-md w-full shadow-2xl space-y-6 md:space-y-8">
+            <div class="text-center space-y-2 flex flex-col items-center">
+                <img class="h-16 w-16 md:h-20 md:w-20 object-contain rounded-xl shadow-sm mb-2" src="/logo.jpeg" alt="Shree Geeta Financial Consultants Logo" />
                 <h2 class="text-3xl font-bold tracking-tight text-primary">Admin Login</h2>
                 <p class="text-sm text-on-surface-variant">Access Shree Geeta Financial Admin Panel</p>
             </div>
@@ -86,12 +84,12 @@
     <div id="dashboard-section" class="hidden flex flex-col min-h-screen">
         <!-- Header -->
         <header class="sticky top-0 w-full z-50 bg-white shadow-sm border-b border-gray-100">
-            <div class="flex justify-between items-center max-w-[1400px] mx-auto px-6 py-4">
-                <div class="text-xl font-bold text-primary flex items-center gap-2">
-                    <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">account_balance</span>
-                    <span>Shree Geeta Financial Admin</span>
+            <div class="flex flex-col sm:flex-row justify-between items-center max-w-[1400px] mx-auto px-4 md:px-6 py-4 gap-4">
+                <div class="text-lg md:text-xl font-bold text-primary flex items-center gap-2">
+                    <img class="h-8 w-8 md:h-10 md:w-10 object-contain rounded-lg" src="/logo.jpeg" alt="Shree Geeta Financial Consultants Logo" />
+                    <span class="text-center sm:text-left leading-tight">Shree Geeta Financial Admin</span>
                 </div>
-                <div class="flex items-center gap-4">
+                <div class="flex items-center gap-4 w-full sm:w-auto justify-center sm:justify-end border-t sm:border-0 border-gray-100 pt-4 sm:pt-0">
                     <a href="/" class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors">View Site</a>
                     <button id="logout-btn" class="bg-primary/10 hover:bg-primary/20 text-primary px-4 py-2 rounded-lg font-semibold text-sm transition-all flex items-center gap-1.5">
                         <span class="material-symbols-outlined text-sm">logout</span> Logout
@@ -100,7 +98,7 @@
             </div>
         </header>
 
-        <main class="flex-grow max-w-[1400px] w-full mx-auto px-6 py-10 space-y-8">
+        <main class="flex-grow max-w-[1400px] w-full mx-auto px-4 md:px-6 py-6 md:py-10 space-y-6 md:space-y-8">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
                     <h1 class="text-3xl font-bold text-primary">Contact Submissions</h1>
@@ -133,8 +131,8 @@
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
                         <thead>
-                            <tr class="bg-gray-50 border-b border-gray-100 text-xs font-bold uppercase tracking-wider text-on-surface-variant">
-                                <th class="px-6 py-4">Name</th>
+                            <tr class="bg-gray-50 border-b border-gray-100 text-xs font-bold uppercase tracking-wider text-on-surface-variant whitespace-nowrap">
+                                <th class="px-4 md:px-6 py-4">Name</th>
                                 <th class="px-6 py-4">Contact Info</th>
                                 <th class="px-6 py-4">Service</th>
                                 <th class="px-6 py-4">Message</th>
